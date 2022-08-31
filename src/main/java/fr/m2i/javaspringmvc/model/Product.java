@@ -10,47 +10,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "products")
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nom;
-    private int prix;
-    private int quantite;
+    
+    private String name;
 
-    public Product() {
+    private Double price;
 
-    }
-
-    public Product(Long id, String nom, int prix, int quantite) {
-        this.id = id;
-        this.nom = nom;
-        this.prix = prix;
-        this.quantite = quantite;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public int getPrix() {
-        return prix;
-    }
-
-    public void setPrix(int prix) {
-        this.prix = prix;
-    }
-
-    public int getQuantite() {
-        return quantite;
-    }
-
-    public void setQuantite(int quantite) {
-        this.quantite = quantite;
-    }
+    private Integer quantity;
 
     public Long getId() {
         return id;
@@ -60,8 +29,27 @@ public class Product {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "Produit{" + "id=" + id + ", nom=" + nom + ", prix=" + prix + ", quantite=" + quantite + '}';
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 }
