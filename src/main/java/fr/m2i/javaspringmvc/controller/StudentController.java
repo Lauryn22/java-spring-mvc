@@ -20,7 +20,7 @@ public class StudentController {
      *                 la méthode doit retourner une String : le nom de la vue qu'on souhaite afficher
      *
      *                 /!\ DANS CHAQUE METHODE GET ou POST JE VAIS DEVOIR RENSEIGNER L'ATTRIBUT "studentForm" /!\
-     *                 /!\ model.addAttribute("studentForm", new StudentForm()); /!\
+     *                 /!\ model.addAttribute("studentForm", new StudentForm()); /!.\
      */
 //    @GetMapping("/student")
 //    public String showStudentForm(ModelMap model) {
